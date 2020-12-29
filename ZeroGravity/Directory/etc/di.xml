@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="ZeroGravity\Directory\Api\Data\CityInformationInterface" type="ZeroGravity\Directory\Model\Data\CityInformation" />
+    <preference for="Magento\Directory\Model\CountryInformationAcquirer" type="ZeroGravity\Directory\Model\CountryInformationAcquirer" />
+    <preference for="Magento\Directory\Helper\Data" type="ZeroGravity\Directory\Helper\Data" />
+    <preference for="Magento\Sales\Block\Adminhtml\Order\Create\Billing\Address" type="ZeroGravity\Directory\Block\Adminhtml\Order\Create\Billing\Address" />
+    <preference for="Magento\Sales\Block\Adminhtml\Order\Create\Shipping\Address" type="ZeroGravity\Directory\Block\Adminhtml\Order\Create\Shipping\Address" />
+    <preference for="Magento\Sales\Block\Adminhtml\Order\Address\Form" type="ZeroGravity\Directory\Block\Adminhtml\Order\Address\Form" />
+    <type name="Magento\Checkout\Block\Checkout\LayoutProcessor">
+        <plugin name="ZeroGravity_Directory_Plugin_Checkout_LayoutProcessor" type="ZeroGravity\Directory\Plugin\Checkout\LayoutProcessor" sortOrder="1" />
+    </type>
+    <type name="Magento\Checkout\Block\Checkout\DirectoryDataProcessor">
+        <plugin name="ZeroGravity_Directory_Plugin_Checkout_DirectoryDataProcessor" type="ZeroGravity\Directory\Plugin\Checkout\DirectoryDataProcessor" sortOrder="1" />
+    </type>
+   <type name="Magento\Directory\Model\ResourceModel\Region\Collection">
+        <plugin name="ZeroGravity_Directory_Plugin_Region_Collection_Options" type="ZeroGravity\Directory\Plugin\Directory\ResourceModel\Region\Options" sortOrder="1" />
+    </type>
+</config>
